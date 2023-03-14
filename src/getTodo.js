@@ -1,6 +1,6 @@
 const AWS = require("aws-sdk")
 
-const fetchTodo = async (event) => {
+const getTodo = async (event) => {
     console.log(event)
   const dynamodb = new AWS.DynamoDB.DocumentClient()
 let todo
@@ -20,7 +20,7 @@ console.log(error)
 }
 
 module.exports = {
-  handler: fetchTodo,
+  handler: getTodo,
 }
 
 
